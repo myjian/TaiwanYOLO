@@ -1972,52 +1972,6 @@
 			display: none;
 		}
 
-/* Header */
-
-	#header {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 375px;
-		height: 100%;
-		color: #fff;
-		background: #222629 url("images/overlay.png");
-		box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.1);
-		text-align: right;
-	}
-
-		#header .top {
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-		}
-
-		#header .bottom {
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			width: 100%;
-		}
-
-		#header .icons {
-			font-size: 0.8em;
-			margin: 0 0 1em 0;
-			text-align: center;
-		}
-
-			#header .icons a {
-				color: #41484c;
-				-moz-transition: color 0.35s ease-in-out;
-				-webkit-transition: color 0.35s ease-in-out;
-				-ms-transition: color 0.35s ease-in-out;
-				transition: color 0.35s ease-in-out;
-			}
-
-				#header .icons a:hover {
-					color: #fff;
-				}
-
 	#logo {
 		position: relative;
 		margin: 1.75em 1.5em 1.5em 1.5em;
@@ -2185,12 +2139,6 @@
 				font-size: 17pt;
 			}
 
-		/* Header */
-
-			#header {
-				width: 300px;
-			}
-
 		/* Footer */
 
 			#footer {
@@ -2247,10 +2195,6 @@
 
 		/* Header */
 
-			#header {
-				width: 20%;
-			}
-
 			#logo .image {
 				position: relative;
 				margin: 0 0 0.5em 0;
@@ -2285,10 +2229,6 @@
 
 /* Narrower */
 
-	#headerToggle {
-		display: none;
-	}
-
 	@media screen and (max-width: 960px) {
 
 		/* Basic */
@@ -2322,46 +2262,6 @@
 				font-size: 1.25em;
 			}
 
-		/* Header */
-
-			#header {
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				backface-visibility: hidden;
-				-moz-transform: translateX(-275px);
-				-webkit-transform: translateX(-275px);
-				-ms-transform: translateX(-275px);
-				transform: translateX(-275px);
-				-moz-transition: -moz-transform 0.5s ease;
-				-webkit-transition: -webkit-transform 0.5s ease;
-				-ms-transition: -ms-transform 0.5s ease;
-				transition: transform 0.5s ease;
-				display: block;
-				height: 100%;
-				left: 0;
-				overflow-y: auto;
-				position: fixed;
-				top: 0;
-				width: 275px;
-				z-index: 10002;
-				width: 275px;
-				background: #222729 url("images/overlay.png");
-				box-shadow: inset -0.25em 0 0.25em 0 rgba(0, 0, 0, 0.125);
-			}
-
-				#header .top {
-					position: relative;
-				}
-
-				#header .bottom {
-					border-top: solid 1px rgba(255, 255, 255, 0.05);
-					box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.15);
-					padding-top: 2em;
-					margin-top: 1em;
-					position: relative;
-				}
-
 			#logo {
 				margin: 1.5em 1.25em 1.25em 1.25em;
 			}
@@ -2370,76 +2270,11 @@
 				padding: 0.5em 1.25em 0.5em 1.25em;
 			}
 
-			#headerToggle {
-				-moz-backface-visibility: hidden;
-				-webkit-backface-visibility: hidden;
-				-ms-backface-visibility: hidden;
-				backface-visibility: hidden;
-				-moz-transition: -moz-transform 0.5s ease;
-				-webkit-transition: -webkit-transform 0.5s ease;
-				-ms-transition: -ms-transform 0.5s ease;
-				transition: transform 0.5s ease;
-				display: block;
-				height: 2.25em;
-				left: 0;
-				position: fixed;
-				top: 0;
-				width: 3.25em;
-				z-index: 10001;
-			}
-
-				#headerToggle .toggle {
-					position: absolute;
-					left: 0;
-					top: 0;
-					width: 100%;
-					height: 100%;
-					outline: 0;
-					border: 0;
-				}
-
-					#headerToggle .toggle:before {
-						font-family: FontAwesome;
-						text-decoration: none;
-						font-style: normal;
-						font-weight: normal;
-						-webkit-font-smoothing: antialiased;
-						-moz-osx-font-smoothing: grayscale;
-						content: '\f0c9';
-						color: #fff;
-						font-size: 18px;
-						line-height: 2.25em;
-						background: rgba(128, 136, 144, 0.5);
-						border-radius: 0.35em;
-						text-align: center;
-						position: absolute;
-						left: 0.5em;
-						top: 0.5em;
-						display: block;
-						width: 3.25em;
-						height: 2.25em;
-						line-height: 2.25em;
-					}
-
 			body.header-visible #main {
 				-moz-transform: translateX(275px);
 				-webkit-transform: translateX(275px);
 				-ms-transform: translateX(275px);
 				transform: translateX(275px);
-			}
-
-			body.header-visible #headerToggle {
-				-moz-transform: translateX(275px);
-				-webkit-transform: translateX(275px);
-				-ms-transform: translateX(275px);
-				transform: translateX(275px);
-			}
-
-			body.header-visible #header {
-				-moz-transform: translateX(0);
-				-webkit-transform: translateX(0);
-				-ms-transform: translateX(0);
-				transform: translateX(0);
 			}
 
 		/* Footer */
