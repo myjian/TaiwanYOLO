@@ -4,7 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var engine = require('ejs-locals');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
@@ -14,6 +14,9 @@ var http = require('http').Server(app);
 http.listen(3000, function(){
 	console.log('listening on *:3000');
 });
+
+// use ejs-locals for all ejs templates:
+app.engine('ejs', engine);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
