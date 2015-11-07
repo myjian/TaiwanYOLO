@@ -1,0 +1,19 @@
+{
+  "name": "taiwan-yolo",
+  "version": "1.0.0",
+  "description": "Emirates Travel Hackathon 2015",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myjian/TaiwanYOLO.git"
+  },
+  "author": "TaiwanYOLO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myjian/TaiwanYOLO/issues"
+  },
+  "homepage": "https://github.com/myjian/TaiwanYOLO#readme"
+}
