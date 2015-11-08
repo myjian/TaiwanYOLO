@@ -131,12 +131,14 @@
     padding: 0 0 0 0 !important;
 }
 .image_caption {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0, 0, 0, 0.5);
     margin: -50px auto 0px auto;
     position: relative;
     z-index: 9;
 		width: 100%;
 		padding: 0 10px 0 10px;
+		color:#fff;
+	/*	text-shadow: 2px 2px #f2f2f2;*/
 }
 .left{
 	text-align:left;
