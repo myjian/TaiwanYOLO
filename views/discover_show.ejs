@@ -1,0 +1,49 @@
+<% layout('./layouts/main_layout') -%>
+		<!-- Main -->
+		<% include ./partials/topnav %>
+			<div id="main">
+				
+				
+				<% include ./partials/sidebar %>
+				<% include ./partials/listing_2 %>
+				
+				
+				
+				
+
+
+
+			</div>
+
+	<!-- Modal -->
+	<div class="modal fade add_location" id="newStory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" >
+	  <div class="modal-dialog" role="document" style="width: 800px !important;">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+						<span aria-hidden="true" style="color: #000;">&times;</span>
+					</button>
+	        <h4 class="modal-title" id="myModalLabel">WRITE A STORY</h4>
+	      </div>
+	      <div class="modal-body">
+					<div style="width:80%; margin:auto auto;">
+					<form class="form-horizontal">
+					 
+					  
+					  <div class="form-group">
+					    
+
+					    <div class="col-sm-12">
+					      <textarea class="form-control" rows="5"></textarea>
+					    </div>
+					  </div>
+					</form>
+				</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal" style="color: #666 !important;">Close</button>
+	        <button type="button" class="btn ">Publish</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>

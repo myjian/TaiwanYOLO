@@ -1,0 +1,123 @@
+<% layout('./layouts/main_layout') -%>
+
+<!-- Main -->
+<div id="main" class="full-width" style="height:100%;">
+	
+	
+	
+	<div style="height:auto;">
+	  <div class="div-left">
+	  	<div id="map" style="height:100%; width:100%;"></div>
+	  </div> 
+	  <div class="div-right">
+	  	<% include ./partials/topnav %>
+			
+			<div>
+				
+			</div>	
+			
+			<% include ./partials/explore_list %>
+			
+	  </div>    
+							
+	</div>			
+			
+
+
+</div>
+
+
+
+<script type="text/javascript">
+var locations = 
+{ 
+"1": {lat: 37.93851, lng: -122.589283, caption: "Top of Mount Tam via Fire Access Road"},
+"2": {lat: 37.74708, lng: -122.412679, caption: "Precita Park"},
+"3": {lat: 37.871798, lng: -122.272533, caption: "Hottub Clubs"},
+"4": {lat: 37.787651, lng: -122.506232, caption: "Mile Rock Beach"},
+"5": {lat: 37.421719, lng: -122.435426, caption: "Cowell Ranch Beach"},
+"6": {lat: 38.883282, lng: -123.030916, caption: "Russian River"},
+"7": {lat: 37.758455, lng: -122.457691, caption: "Mt. Sutro Open Space Reserve"},
+"8": {lat: 37.574918, lng: -122.457189, caption: "San Pedro Mountain and Montara Mountain"},
+"9": {lat: 37.386687, lng: -122.265224, caption: "Alice’s Restaurant"},
+"10": {lat: 38.025905, lng: -122.72482, caption: "The Inkwells"},
+"11": {lat: 37.791521, lng: -122.410615, caption: "Top Of The Mark"},
+"12": {lat: 38.310842, lng: -123.067143, caption: "Bodega Head State Park"},
+"13": {lat: 37.334434, lng: -122.120699, caption: "Rancho San Antonio county park"},
+"14": {lat: 37.450152, lng: -121.852814, caption: "Ed Levin County Park"},
+"15": {lat: 37.254069, lng: -122.039056, caption: "Hakone Gardens"},
+"16": {lat: 24.504964, lng: 121.525898, caption: "Taipingshan"},
+"17": {lat: 33.560216, lng: -117.822082, caption: "Crystal Cove"},
+"18": {lat: 39.44939, lng: -123.812572, caption: "Fort Bragg"},
+"19": {lat: 38.29978, lng: -122.293228, caption: "Old World Inns"}
+
+};
+var contentString1 = "<article class=\"item\"><a href=\"/discovers/1\" class=\"image fit\"><img src=\"/images/";
+var contentString2 = ".jpg\"/></a><header><div class=\"item-inner\"><h3>";
+var contentString3 = "<span class=\"upvote\"><a href=\"#\" style=\"border: 0px;\"><i class=\"fa fa-heart-o\"></i></a>20 </span></h3></div></header></article>";
+
+
+									
+
+var i = 0;
+
+
+
+function initMap() {
+	var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 37.9385, lng: -122.589283},
+    zoom: 8
+  });
+
+
+  for(var locat in locations) {
+       // init markers
+			 i += 1;
+       var marker = new google.maps.Marker({
+           position: {lat: locations[locat].lat, lng: locations[locat].lng},
+           map: map,
+				 	 label: locations[locat].caption
+       });
+
+       // process multiple info windows
+       (function(marker, i) {
+           // add click event
+           google.maps.event.addListener(marker, 'click', function() {
+               infowindow = new google.maps.InfoWindow({
+								 content: contentString1+i.toString()+contentString2+locations[i.toString()].caption+contentString3
+               });
+               infowindow.open(map, marker);
+							 console.log(infowindow.content);
+           });
+       })(marker, i);	
+			 //console.log(infowindow.content);
+/*	
+	for(var locat in locations){ 
+		
+		
+		markers.push( new google.maps.Marker({ 
+			position: {lat: locations[locat].lat, lng: locations[locat].lng},
+			label: locations[locat].caption,
+		  map: map,
+		  title: 'Hello World!'
+			})
+		);
+		markers[markers.length - 1].addListener('click', function() {
+			infowins.push( new google.maps.InfoWindow({ 
+					content: contentString1+i+contentString2+locations[locat].caption+contentString3
+		  }) 
+		  );
+			infowins[infowins.length - 1].open(map, markers[markers.length - 1]);
+			i += 1; 			
+		});
+*/		
+	
+}
+}
+
+
+
+</script>
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDg6Vt2LhSqKWgSs8eCbHc-I-0N9iEN84U&callback=initMap">
+    </script>

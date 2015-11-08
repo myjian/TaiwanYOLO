@@ -1,0 +1,31 @@
+<!-- Portfolio -->
+<section id="portfolio" class="two">
+	<div class="container" style="padding: 0 1em 0 1em;">
+		<header>
+			<h2>Portfolio</h2>
+		</header>
+
+		<p></p>
+
+		<div>
+<div id="map" style="height:600px; width:100%;"></div>					
+		</div>
+	</div>
+</section>
+					
+					
+
+    
+<script type="text/javascript">
+
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -34.397, lng: 150.644},
+    zoom: 8
+  });
+}
+</script>
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDg6Vt2LhSqKWgSs8eCbHc-I-0N9iEN84U&callback=initMap">
+    </script>

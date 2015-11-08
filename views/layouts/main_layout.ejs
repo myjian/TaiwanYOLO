@@ -10,11 +10,16 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="/components/bootstrap/dist/css/bootstrap.min.css" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
+		
+		<link rel="stylesheet" href="../assets/css/custom.css" />
 	</head>
 	<body>
+		
 		<%- body %>
 		
 
@@ -22,10 +27,64 @@
 			<script src="../assets/js/jquery.min.js"></script>
 			<script src="../assets/js/jquery.scrolly.min.js"></script>
 			<script src="../assets/js/jquery.scrollzer.min.js"></script>
+			<script src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
 			<script src="../assets/js/skel.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="../assets/js/main.js"></script>
-
+	
+	
+	<!-- Modal -->
+	<div class="modal fade add_location" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" data-backdrop="static" >
+	  <div class="modal-dialog" role="document" style="width: 800px !important;">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+						<span aria-hidden="true" style="color: #000;">&times;</span>
+					</button>
+	        <h4 class="modal-title" id="myModalLabel">NEW DISCOVERY</h4>
+	      </div>
+	      <div class="modal-body">
+					<div style="width:80%; margin:auto auto;">
+					<form class="form-horizontal">
+					  <div class="form-group">
+					    <label class="col-sm-2 control-label">Name*</label>
+							<div class="col-sm-1"></div>
+					    <div class="col-sm-9">
+					      <input type="text" class="form-control" id="inputEmail3" placeholder="Email">
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label class="col-sm-2 control-label">Category*</label>
+							<div class="col-sm-1"></div>
+					    <div class="col-sm-9">
+								<select class="form-control">
+								  <option>1</option>
+								  <option>2</option>
+								  <option>3</option>
+								  <option>4</option>
+								  <option>5</option>
+								</select>
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+							<div class="col-sm-1"></div>
+					    <div class="col-sm-9">
+					      <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+					    </div>
+					  </div>
+					</form>
+				</div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal" style="color: #666 !important;">Close</button>
+	        <button type="button" class="btn ">Save changes</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+			
 	</body>
 </html>
