@@ -4,3 +4,6 @@ node_modules/
 *~
 *.un~
 *.swp
+
+db/
+config.js
