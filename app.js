@@ -10,15 +10,13 @@ var passport = require('passport');
 
 var app = express();
 var http = require('http').Server(app);
-
-require('./models/DBinit').init(function(){});
-
-var port = process.env.VCAP_APP_PORT || '3000';
-app.set('port', port);
+var port = process.env.PORT || 3000;
 
 http.listen(port, function(){
 	console.log('listening on *:' + port);
 });
+
+require('./models/DBinit').init(function(){});
 
 // use ejs-locals for all ejs templates:
 app.engine('ejs', engine);

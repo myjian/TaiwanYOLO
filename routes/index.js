@@ -42,7 +42,7 @@ passport.use(new FacebookStrategy({
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	res.render('index', { title: 'Uncharted' });
+	res.render('explore', { title: 'Uncharted' });
 });
 
 router.get('/auth/facebook', facebookRoutes.login);
@@ -65,27 +65,7 @@ router.get('/api/me', function(req, res) {
 });
 
 router.get('/explore', function(req, res, next) {
-  res.render('explore', { title: 'Express' });
+	res.redirect('/');
 });
-
-
-
-
-router.get('/explore', function(req, res, next) {
-  res.render('explore', { title: 'Express' });
-});
-
-
-
-
-
-var ifSignIn = function (req, res, next) {
-//	if (req.session && req.session.user) { 
-//		console.log('~~~~~~~~~~~~~~~ Session exist!!!');
-		next();
-//	}else{
-//		res.redirect('/signin');
-//	}  
-}
 
 module.exports = router;
