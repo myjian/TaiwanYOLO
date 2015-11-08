@@ -13,7 +13,7 @@ var http = require('http').Server(app);
 
 require('./models/DBinit').init(function(){});
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = process.env.PORT || '3000';
 app.set('port', port);
 
 http.listen(port, function(){
