@@ -13,8 +13,11 @@ var http = require('http').Server(app);
 
 require('./models/DBinit').init(function(){});
 
-http.listen(3000, function(){
-	console.log('listening on *:3000');
+var port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
+
+http.listen(port, function(){
+	console.log('listening on *:' + port);
 });
 
 // use ejs-locals for all ejs templates:
